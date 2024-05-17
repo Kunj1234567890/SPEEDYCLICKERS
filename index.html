@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speedy Clicks</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar left">
+            <div class="upgrades">
+                <h2>Upgrades</h2>
+                <button class="upgrade-item" onclick="buyUpgrade(100, 1.25)">Increase Click Value (1.25x) - $100</button>
+                <button class="upgrade-item" onclick="buyUpgrade(500, 1.5)">Increase Click Value (1.5x) - $500</button>
+                <button class="upgrade-item" onclick="upgradeClickers(200, 2)">Upgrade Clickers (2x) - $200</button>
+            </div>
+        </div>
+        <div class="game-container">
+            <h1>Speedy Clicks</h1>
+            <div class="stats">
+                <p>Time Left: <span id="timer">100</span> seconds</p>
+                <p class="money">Money: $<span id="money">0</span></p>
+                <p class="cps">Clicks Per Second: <span id="cps">0</span></p>
+            </div>
+            <div class="click-container">
+                <button id="click-button">
+                    <img src="click-image.png" alt="Click me!" />
+                </button>
+            </div>
+            <audio id="click-sound" src="click-sound.mp3"></audio>
+        </div>
+        <div class="sidebar right">
+            <div class="shop">
+                <h2>Shop</h2>
+                <button class="shop-item" onclick="buyItem(10, 1)">Buy Clicker (+$1/s) - $10</button>
+                <button class="shop-item" onclick="buyItem(50, 5)">Buy Auto Clicker (+$5/s) - $50</button>
+                <button class="shop-item" onclick="buyItem(100, 10)">Buy Mega Clicker (+$10/s) - $100</button>
+                <button class="shop-item" onclick="buyItem(500, 50)">Buy Ultra Clicker (+$50/s) - $500</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

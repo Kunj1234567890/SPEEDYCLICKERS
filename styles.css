@@ -1,0 +1,126 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #ffffff, #74ebd5);
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    margin: 0 20px;
+}
+
+.left {
+    order: -1;
+}
+
+.game-container {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex-grow: 1;
+}
+
+h1 {
+    color: #333;
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px #74ebd5;
+}
+
+.stats p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.money {
+    border: 2px solid darkgreen;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.cps {
+    border: 2px solid green;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.click-container {
+    position: relative;
+}
+
+#click-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 20px 0;
+    position: relative;
+}
+
+#click-button img {
+    width: 150px;
+    height: 150px;
+}
+
+.effect {
+    position: absolute;
+    animation: fall 1s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+.shop, .upgrades {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.shop h2, .upgrades h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.shop-item, .upgrade-item {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1.1em;
+    background-color: #74ebd5;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.shop-item:hover, .upgrade-item:hover {
+    background-color: #9face6;
+}
